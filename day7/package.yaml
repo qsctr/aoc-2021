@@ -1,0 +1,8 @@
+name: day7
+
+dependencies:
+- base >= 4.7 && < 5
+- split
+
+executable:
+  main: Day7.hs

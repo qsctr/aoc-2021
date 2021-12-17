@@ -1,0 +1,9 @@
+name: day6
+
+dependencies:
+- base >= 4.7 && < 5
+- split
+- vector
+
+executable:
+  main: Day6.hs

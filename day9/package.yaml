@@ -1,0 +1,9 @@
+name: day9
+
+dependencies:
+- base >= 4.7 && < 5
+- union-find
+- vector
+
+executable:
+  main: Day9.hs

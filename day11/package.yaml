@@ -1,0 +1,8 @@
+name: day11
+
+dependencies:
+- base >= 4.7 && < 5
+- vector
+
+executable:
+  main: Day11.hs

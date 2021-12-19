@@ -15,7 +15,7 @@ poly40 rules temp = maximum counts - minimum counts
           where z = rules M.! (x, y)
 
 main = do
-    (temp:"":ruleStrs) <- lines <$> readFile "input.txt"
+    temp:"":ruleStrs <- lines <$> readFile "input.txt"
     let rules = M.fromList $ map (\(x:y:ys) -> ((x, y), last ys)) ruleStrs
     print $ poly10 rules temp
     print $ poly40 rules temp

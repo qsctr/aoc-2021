@@ -9,7 +9,7 @@ pathsAllSmallOnce conns = visit S.empty "start"
             | otherwise = go vs
           where go vs' = sum $ map (visit vs') $ cs M.! x
         cs = foldr addConn M.empty conns
-        addConn (x, y) m = M.insertWith (++) x [y] $ M.insertWith (++) y [x] m
+        addConn (x, y) = M.insertWith (++) x [y] . M.insertWith (++) y [x]
 
 pathsSingleSmallTwice conns = visit S.empty False "start"
   where visit _ _ "end" = 1
@@ -21,7 +21,7 @@ pathsSingleSmallTwice conns = visit S.empty False "start"
           where goSmall = go $ S.insert x vs
                 go vs' st' = sum $ map (visit vs' st') $ cs M.! x
         cs = foldr addConn M.empty conns
-        addConn (x, y) m = M.insertWith (++) x [y] $ M.insertWith (++) y [x] m
+        addConn (x, y) = M.insertWith (++) x [y] . M.insertWith (++) y [x]
 
 main = do
     conns <- map (fmap tail . break (== '-')) . lines <$> readFile "input.txt"

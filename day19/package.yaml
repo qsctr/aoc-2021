@@ -1,0 +1,13 @@
+name: day19
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- linear
+- parallel
+- split
+
+ghc-options: -O2 -threaded
+
+executable:
+  main: Day19.hs

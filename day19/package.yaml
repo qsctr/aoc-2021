@@ -7,7 +7,7 @@ dependencies:
 - parallel
 - split
 
-ghc-options: -O2 -threaded
+ghc-options: -O2 -threaded -with-rtsopts=-N
 
 executable:
   main: Day19.hs

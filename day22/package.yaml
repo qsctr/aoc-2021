@@ -1,0 +1,9 @@
+name: day22
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- split
+
+executable:
+  main: Day22.hs
